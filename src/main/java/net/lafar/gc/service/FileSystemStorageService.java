@@ -87,7 +87,7 @@ public class FileSystemStorageService {
         boolean exito;
         try {
             OutputStream out = new FileOutputStream(archivoPDF);
-            PdfOptions options = null; //PdfOptions.create();
+            PdfOptions options = PdfOptions.create();
             PdfConverter.getInstance().convert(documentWord, out, options);
             exito = true;
         } catch (XWPFConverterException e) {

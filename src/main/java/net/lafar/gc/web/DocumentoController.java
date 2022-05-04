@@ -20,9 +20,9 @@ public class DocumentoController {
 
     @ResponseStatus(HttpStatus.ACCEPTED)
     @GetMapping("convertir")
-    public void convertir(){
-        fileSystemStorageService.convertir();
-        /*
+    public String convertir(){
+        // fileSystemStorageService.convertir();
+
         File archivoWord = new File("D:\\documentos_prueba\\manual.docx");
         File archivoPDF = new File("D:\\documentos_prueba\\manual.pdf");
 
@@ -34,6 +34,5 @@ public class DocumentoController {
             return "No se convirtio";
         }
 
-         */
     }
 }
